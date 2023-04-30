@@ -40,11 +40,11 @@ if __name__ == "__main__":
         Mileage   = sys.argv[2]
         State     = sys.argv[3]
         Make      = sys.argv[4]
-        YeModelar = sys.argv[5]
+        Model = sys.argv[5]
         
 
-        p1 = predict(url)
+        p1 = predict(Year, Mileage, State, Make, Model)
         
-        print(url)
+        #print(url)
         print('price: ', p1)
         
