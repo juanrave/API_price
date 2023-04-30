@@ -36,10 +36,15 @@ if __name__ == "__main__":
         
     else:
 
-        url = sys.argv[1]
-
-        #p1 = predict_proba(url)
+        Year      = sys.argv[1]
+        Mileage   = sys.argv[2]
+        State     = sys.argv[3]
+        Make      = sys.argv[4]
+        YeModelar = sys.argv[5]
         
-        #print(url)
-        #print('Probability of Phishing: ', p1)
+
+        p1 = predict(url)
+        
+        print(url)
+        print('price: ', p1)
         
