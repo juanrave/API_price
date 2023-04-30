@@ -5,7 +5,7 @@ from flask_restx import Api, Resource, fields
 import joblib
 from model_deployment import predict
 from flask_cors import CORS
-from gevent.pywsgi import WSGIServer
+#from gevent.pywsgi import WSGIServer
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes and origins
@@ -81,5 +81,6 @@ class PhishingApi(Resource):
 if __name__ == '__main__':
     #from waitress import serve
     #serve(app.run(debug=True, use_reloader=False, host='0.0.0.0', port=5000))
-    http_server = WSGIServer(('', 5000), app)
-    http_server.serve_forever()
+    #http_server = WSGIServer(('', 5000), app)
+    #http_server.serve_forever()
+    app.run(debug=True, use_reloader=False, host='0.0.0.0', port=5000)
