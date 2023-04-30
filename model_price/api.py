@@ -9,17 +9,6 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes and origins
 
-api = Api(
-    app, 
-    version='1.0', 
-    title='Price Prediction API',
-    description='Price Prediction API')
-
-ns = api.namespace('predict', 
-     description='Price')
-   
-parser = api.parser()
-
 # Definición API Flask
 api = Api(
     app, 
@@ -32,6 +21,7 @@ ns = api.namespace('predict',
 
 # Definición argumentos o parámetros de la API
 parser = api.parser()
+
 #Year
 parser.add_argument(
     'Year', 
